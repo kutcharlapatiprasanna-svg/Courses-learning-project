@@ -1,0 +1,153 @@
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 35, 45, .58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(36, 68, 92, .22);
+}
+
+.modal h2 {
+  color: #24445c;
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.total {
+  border-top: 1px solid #e2eceb;
+  margin-top: 6px;
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #24445c;
+}
+
+.discount {
+  color: #1b6b35;
+}
+
+.coupon {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.coupon input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #c5d8d8;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.coupon input:focus {
+  outline: none;
+  border-color: #397f86;
+  box-shadow: 0 0 0 2px rgba(57, 127, 134, .12);
+}
+
+.btn {
+  background: #24445c;
+  color: #fff;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background: #397f86;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.ghost {
+  background: #fff;
+  color: #24445c;
+  border: 1px solid #24445c;
+}
+
+.ghost:hover:not(:disabled) {
+  background: #edf4f3;
+  color: #24445c;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.actions .btn {
+  flex: 1;
+}
+
+.error {
+  color: #b02a37;
+  background: #fdecee;
+  border: 1px solid #f3c2c8;
+  padding: 9px 11px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.ok {
+  color: #1b6b35;
+  background: #eaf6ed;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: -6px 0 8px;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 18px;
+  }
+
+  .coupon {
+    flex-wrap: wrap;
+  }
+
+  .coupon input {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions .btn {   
+    width: 100%;
+  }
+}
