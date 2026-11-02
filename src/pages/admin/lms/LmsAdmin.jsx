@@ -3,6 +3,7 @@ import { useState } from "react";
 
 //import S from "./lms.module.css";
 //import { errMsg } from "../utils";
+import S from "./lms.module.css";
 import {
   CloneCourseApi,
   CreateCategoryApi,

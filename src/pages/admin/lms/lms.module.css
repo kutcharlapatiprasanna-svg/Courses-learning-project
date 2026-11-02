@@ -149,7 +149,6 @@
   font-size: 13px;
   color: #666;
   display: -webkit-box;
-  /* -webkit-line-clamp: 2; */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -578,7 +577,6 @@
   font-size: 13px;
 }
 
-/* LMS Marketplace card shown on the home page */
 .lmsCard {
   display: flex;
   align-items: center;
@@ -622,4 +620,13 @@
   .lectureLayout {
     grid-template-columns: 1fr;
   }
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* centers Overview … Coupons */
+  gap: 10px;
+  margin: 40px 0 28px;       /* top | left-right | bottom */
+  padding-top: 24px;         /* extra space under the navbar */
 }
