@@ -47,7 +47,7 @@
 
 // Shared helpers
 
-export const PLACEHOLDER_IMG = "/course-placeholder.svg";
+export const PLACEHOLDER_IMG = `${import.meta.env.BASE_URL}course-placeholder.svg`;
 
 // API returns thumbnail as { public_id, url };
 // Older data may be a plain string.

@@ -170,10 +170,15 @@ export default function Navbar() {
   const userName = user?.name || "User";
   const userEmail = user?.email || "Email unavailable";
 
-  const profileImage =
+  const profileImageSource =
     user?.profilePicture ||
     user?.avatar ||
-    user?.image ||
+    user?.image;
+
+  const profileImage =
+    (typeof profileImageSource === "string" && profileImageSource) ||
+    profileImageSource?.url ||
+    profileImageSource?.secure_url ||
     DEFAULT_PROFILE_IMAGE;
 
   const role = user?.role || "User";
