@@ -9,6 +9,12 @@
     config.headers.Authorization = `Bearer ${token}`;
   }
 
+        // A stale cached response can carry the old localhost CORS header and
+        // block the request, so give each GET a fresh cache key.
+        if ((config.method || "get").toLowerCase() === "get") {
+          config.params = { ...(config.params || {}), _cb: "20261103" };
+        }
+
         return config;
       },
       (error) => Promise.reject(error)

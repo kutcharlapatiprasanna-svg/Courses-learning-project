@@ -19,7 +19,7 @@ const Home = () => {
       toast.error(errMsg(error, "Failed to load courses"));
     });
 
-    fetch(`${API_BASE_URL}/lms/categories`)
+    fetch(`${API_BASE_URL}/lms/categories?_cb=20261103`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Unable to load categories");

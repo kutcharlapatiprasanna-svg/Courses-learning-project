@@ -49,7 +49,7 @@ export default function AllCourses() {
 
     try {
       const response = await fetch(
-        `${API_BASE}/get-all-course-dashboard`,
+        `${API_BASE}/get-all-course-dashboard?_cb=20261103`,
         { headers: getHeaders() }
       );
 
