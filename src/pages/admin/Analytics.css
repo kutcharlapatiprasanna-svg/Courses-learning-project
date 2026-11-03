@@ -2,8 +2,8 @@
 
 .analytics-page {
   padding: 24px;
-  color: #24372c;
-  background: #f4f7f5;
+  color: #292929;
+  background: #ffffff;
   min-height: 100vh;
 }
 
@@ -22,12 +22,12 @@
 
 .analytics-heading p {
   margin: 0;
-  color: #52665b;
+  color: rgba(41, 41, 41, 0.72);
 }
 
 .analytics-heading > span {
-  background: #e8efea;
-  color: #3c5a4a;
+  background: #f5f5f5;
+  color: #292929;
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 13px;
@@ -41,16 +41,16 @@
 }
 
 .analytics-card {
-  background: #f4f7f5;
+  background: #ffffff;
   padding: 22px;
   border-radius: 12px;
-  border: 1px solid #cfded5;
-  box-shadow: 0 2px 8px #1b2a2208;
+  border: 1px solid rgba(41, 41, 41, 0.18);
+  box-shadow: 0 2px 8px rgba(41, 41, 41, 0.03);
 }
 
 .analytics-card p {
   margin: 0 0 12px;
-  color: #52665b;
+  color: rgba(41, 41, 41, 0.72);
   font-size: 14px;
 }
 
@@ -60,22 +60,22 @@
 }
 
 .users-card {
-  border-top: 4px solid #517663;
+  border-top: 4px solid #d94848;
 }
 
 .courses-card {
-  border-top: 4px solid #3c5a4a;
+  border-top: 4px solid #292929;
 }
 
 .orders-card {
-  border-top: 4px solid #6e917f;
+  border-top: 4px solid #d94848;
 }
 
 .analytics-chart {
-  background: #f4f7f5;
+  background: #ffffff;
   padding: 22px;
   margin-bottom: 20px;
-  border: 1px solid #cfded5;
+  border: 1px solid rgba(41, 41, 41, 0.18);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -105,7 +105,7 @@
 .bar-count,
 .bar-month {
   font-size: 12px;
-  color: #52665b;
+  color: rgba(41, 41, 41, 0.72);
   white-space: nowrap;
 }
 
@@ -115,7 +115,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  border-bottom: 1px solid #cfded5;
+  border-bottom: 1px solid rgba(41, 41, 41, 0.18);
 }
 
 .chart-bar {
@@ -126,25 +126,25 @@
 }
 
 .chart-bar.blue {
-  background: #6e917f;
+  background: #d94848;
 }
 
 .chart-bar.green {
-  background: #517663;
+  background: #d94848;
 }
 
 .chart-bar.purple {
-  background: #a3bcae;
+  background: #f5f5f5;
 }
 
 .no-data {
   text-align: center;
-  color: #52665b;
+  color: rgba(41, 41, 41, 0.72);
   padding: 40px 0;
 }
 
 .analytics-error {
-  color: #456654;
+  color: #d94848;
   padding: 20px;
 }
 

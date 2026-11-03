@@ -5,23 +5,23 @@
 }
 
 :root {
-  --nav-bg: #1b2a22;
-  --nav-border: #24372c;
+  --nav-bg: #292929;
+  --nav-border: #292929;
 
-  --brand: #6e917f;
-  --brand-hover: #517663;
+  --brand: #d94848;
+  --brand-hover: #d94848;
 
-  --nav-text: #e6eae8;
-  --nav-muted: #9eada6;
+  --nav-text: #ffffff;
+  --nav-muted: #f5f5f5;
 
-  --dropdown-bg: #24372c;
-  --dropdown-hover: #3f4944;
+  --dropdown-bg: #292929;
+  --dropdown-hover: #292929;
 
-  --heading: #f4f7f5;
-  --border: #3f4944;
+  --heading: #ffffff;
+  --border: #292929;
 
-  --accent: #517663;
-  --danger: #6e917f;
+  --accent: #d94848;
+  --danger: #d94848;
 }
 
 
@@ -33,10 +33,10 @@
   align-items: center;
   justify-content: space-between;
 
-  background: var(--nav-bg);
-  border-bottom: 1px solid var(--nav-border);
+  background: #292929;
+  border-bottom: 1px solid #3a3a3a;
 
-  box-shadow: 0 4px 18px rgba(27, 42, 34, 0.16);
+  box-shadow: 0 4px 18px rgba(41, 41, 41, 0.28);
 
   position: sticky;
   top: 0;
@@ -74,6 +74,13 @@
   color: var(--brand);
 }
 
+.nav-links > a.active {
+  color: var(--brand);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
 
 
 .auth-links {
@@ -94,25 +101,26 @@
 
 .login-link {
   color: var(--nav-text);
-  border: 1px solid #52665b;
+  border: 1px solid rgba(255, 255, 255, 0.55);
   background: transparent;
 }
 
 .login-link:hover {
-  background: var(--dropdown-hover);
+  background: #3a3a3a;
   border-color: var(--brand);
   color: var(--heading);
 }
 
 .register-link {
-  color: #f4f7f5;
+  color: #ffffff;
   background: var(--brand-hover);
   border: 1px solid var(--brand-hover);
 }
 
 .register-link:hover {
-  background: #456654;
-  border-color: #456654;
+  background: #3a3a3a;
+  border-color: #3a3a3a;
+  color: #ffffff;
 }
 
 
@@ -126,28 +134,36 @@
   align-items: center;
   gap: 10px;
   border: none;
+  border-radius: 10px;
   background: transparent;
   cursor: pointer;
   padding: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.profile-button:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .profile-circle {
   width: 43px;
   height: 43px;
+  min-width: 43px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #515f58;
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 .profile-fallback {
   width: 43px;
   height: 43px;
+  min-width: 43px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #456654;
-  color: #f4f7f5;
+  background: #d94848;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 700;
 }
@@ -163,7 +179,7 @@
 }
 
 .dropdown-arrow {
-  color: var(--nav-muted);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 10px;
 }
 
@@ -180,7 +196,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
 
-  box-shadow: 0 15px 40px rgba(27, 42, 34, 0.28);
+  box-shadow: 0 15px 40px rgba(41, 41, 41, 0.28);
 
   animation: dropdownFade 0.2s ease;
 }
@@ -213,15 +229,15 @@
   min-width: 55px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #515f58;
+  border: 2px solid rgba(41, 41, 41, 0.72);
 }
 
 .dropdown-avatar-fallback {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #456654;
-  color: #f4f7f5;
+  background: #d94848;
+  color: #ffffff;
   font-size: 22px;
   font-weight: 700;
 }
@@ -248,8 +264,8 @@
   width: fit-content;
   padding: 3px 9px;
   border-radius: 20px;
-  background: #2d4337;
-  color: #cfded5;
+  background: #292929;
+  color: #ffffff;
   font-size: 11px;
   text-transform: capitalize;
 }
@@ -295,7 +311,7 @@
 }
 
 .logout-button:hover {
-  background: #24372c;
+  background: #292929;
 }
 
 .profile-dropdown > a span,
@@ -324,6 +340,20 @@
   .profile-name {
     display: none;
   }
+
+  .profile-circle,
+  .profile-fallback {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .dropdown-avatar,
+  .dropdown-avatar-fallback {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -339,5 +369,19 @@
   .profile-dropdown {
     right: 0;
     width: 270px;
+  }
+
+  .profile-circle,
+  .profile-fallback {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
+  .dropdown-avatar,
+  .dropdown-avatar-fallback {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
   }
 }

@@ -1,8 +1,8 @@
 .admin-panel {
   display: flex;
   min-height: calc(100vh - 72px);
-  background: #f4f7f5;
-  color: #24372c;
+  background: #ffffff;
+  color: #292929;
   font-family: Inter, Arial, sans-serif;
 }
 
@@ -11,8 +11,8 @@
   width: 260px;
   min-width: 260px;
   padding: 25px 16px;
-  background: #1b2a22;
-  color: #f4f7f5;
+  background: #292929;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
 }
@@ -22,7 +22,7 @@
   align-items: center;
   gap: 12px;
   padding: 0 8px 25px;
-  border-bottom: 1px solid #24372c;
+  border-bottom: 1px solid #292929;
 }
 
 .admin-logo-icon {
@@ -32,8 +32,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: #456654;
-  color: #f4f7f5;
+  background: #d94848;
+  color: #ffffff;
   font-size: 23px;
   font-weight: 800;
 }
@@ -46,13 +46,13 @@
 
 .admin-logo p {
   margin: 5px 0 0;
-  color: #6e917f;
+  color: #d94848;
   font-size: 12px;
 }
 
 .admin-menu-title {
   margin: 28px 10px 12px;
-  color: #6e917f;
+  color: #d94848;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -70,7 +70,7 @@
   gap: 12px;
   padding: 13px 12px;
   border-radius: 8px;
-  color: #a3bcae;
+  color: #f5f5f5;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -78,13 +78,13 @@
 }
 
 .admin-menu-link:hover {
-  background: #24372c;
-  color: #f4f7f5;
+  background: #292929;
+  color: #ffffff;
 }
 
 .admin-menu-link.active {
-  background: #456654;
-  color: #f4f7f5;
+  background: #d94848;
+  color: #ffffff;
 }
 
 .admin-menu-icon {
@@ -104,15 +104,15 @@
   display: flex;
   align-items: center;
   padding: 20px 30px;
-  background: #f4f7f5;
-  border-bottom: 1px solid #cfded5;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(41, 41, 41, 0.18);
 }
 
 .admin-header h1 {
   margin: 0;
   font-size: 23px;
   font-weight: 700;
-  color: #1b2a22;
+  color: #292929;
 }
 
 .admin-page-content {

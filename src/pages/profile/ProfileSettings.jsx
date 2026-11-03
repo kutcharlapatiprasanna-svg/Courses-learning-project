@@ -1,21 +1,26 @@
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import useAuth from "../../hooks/useAuth";
-import { updateMyProfile } from "../../services/profileService";
+import {
+  updateMyProfile,
+  updateMyProfilePicture,
+} from "../../services/profileService";
 
 import "./ProfileSettings.css";
 
 const DEFAULT_PROFILE_IMAGE =
   "https://i.pravatar.cc/150?img=47";
 
+const getProfileImageSource = (profile) =>
+  profile?.profilePicture ||
+  profile?.avatar ||
+  profile?.image;
+
 // GET PROFILE IMAGE URL
 const getProfileImage = (profile) => {
-  const image =
-    profile?.profilePicture ||
-    profile?.avatar ||
-    profile?.image;
+  const image = getProfileImageSource(profile);
 
   if (typeof image === "string") {
     return image;
@@ -31,6 +36,42 @@ const getProfileImage = (profile) => {
 
   return DEFAULT_PROFILE_IMAGE;
 };
+
+const hasProfileImage = (profile) => {
+  const image = getProfileImageSource(profile);
+
+  if (typeof image === "string") {
+    return Boolean(image);
+  }
+
+  if (typeof image === "object" && image !== null) {
+    return Boolean(image.url || image.secure_url);
+  }
+
+  return false;
+};
+
+const getUpdatedUser = (response) =>
+  response?.user ||
+  response?.data?.user ||
+  response?.data ||
+  {};
+
+// READ SELECTED IMAGE AS BASE64 DATA URL
+const readImageAsDataUrl = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = () => resolve(reader.result);
+
+    reader.onerror = () =>
+      reject(
+        reader.error ||
+        new Error("Unable to read the selected image.")
+      );
+
+    reader.readAsDataURL(file);
+  });
 
 export default function ProfileSettings() {
   const { user, updateUser } = useAuth();
@@ -50,20 +91,8 @@ export default function ProfileSettings() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  // CLEAN UP PREVIEW IMAGE URL
-  useEffect(() => {
-    return () => {
-      if (
-        typeof previewImage === "string" &&
-        previewImage.startsWith("blob:")
-      ) {
-        URL.revokeObjectURL(previewImage);
-      }
-    };
-  }, [previewImage]);
-
   // SELECT IMAGE FROM COMPUTER
-  const handleImageChange = (event) => {
+  const handleImageChange = async (event) => {
     const file = event.target.files?.[0];
 
     if (!file) return;
@@ -83,10 +112,15 @@ export default function ProfileSettings() {
       return;
     }
 
-    const imageUrl = URL.createObjectURL(file);
+    try {
+      const imageDataUrl = await readImageAsDataUrl(file);
 
-    setSelectedImage(file);
-    setPreviewImage(imageUrl);
+      setSelectedImage(imageDataUrl);
+      setPreviewImage(imageDataUrl);
+    } catch {
+      setError("Unable to read the selected image.");
+      event.target.value = "";
+    }
   };
 
   // SAVE PROFILE
@@ -104,43 +138,42 @@ export default function ProfileSettings() {
     try {
       setLoading(true);
 
-      const formData = new FormData();
+      const profileResponse = await updateMyProfile({
+        name: name.trim(),
+      });
 
-      formData.append("name", name.trim());
+      let updatedUser = getUpdatedUser(profileResponse);
+      let pictureUser = null;
 
       if (selectedImage) {
-        formData.append(
-          "profilePicture",
-          selectedImage
-        );
+        const pictureResponse =
+          await updateMyProfilePicture(selectedImage);
+
+        pictureUser = getUpdatedUser(pictureResponse);
+
+        updatedUser = {
+          ...updatedUser,
+          ...pictureUser,
+        };
       }
-
-      const response = await updateMyProfile(formData);
-
-      // GET UPDATED USER FROM API RESPONSE
-      const updatedUser =
-        response?.user ||
-        response?.data?.user ||
-        response?.data ||
-        {};
 
       const finalUser = {
         ...updatedUser,
+        ...(selectedImage && !hasProfileImage(pictureUser)
+          ? { avatar: { url: selectedImage } }
+          : {}),
         name: updatedUser.name || name.trim(),
       };
 
-      // UPDATE AUTH CONTEXT
+      // UPDATE AUTH CONTEXT (NAVBAR AVATAR READS FROM THIS)
       updateUser(finalUser);
 
-      // UPDATE PROFILE IMAGE
-      const returnedImage = getProfileImage(finalUser);
-
-      setPreviewImage(returnedImage);
+      setPreviewImage(getProfileImage(finalUser));
 
       setSelectedImage(null);
 
       setMessage(
-        response?.message ||
+        profileResponse?.message ||
         "Profile updated successfully."
       );
 

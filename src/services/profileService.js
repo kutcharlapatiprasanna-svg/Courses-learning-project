@@ -1,12 +1,19 @@
 
 import axiosInstance from "../api/axiosInstance";
 
-// Replace this endpoint with your actual backend endpoint.
-
-export const updateMyProfile = async (formData) => {
+export const updateMyProfile = async (profileData) => {
   const response = await axiosInstance.put(
     "/auth/update-user-info",
-    formData
+    profileData
+  );
+
+  return response.data;
+};
+
+export const updateMyProfilePicture = async (avatar) => {
+  const response = await axiosInstance.put(
+    "/auth/update-user-profile-picture",
+    { avatar }
   );
 
   return response.data;

@@ -145,8 +145,8 @@
 //   );
 // }
 
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import useAuth from "../hooks/useAuth";
 
@@ -181,6 +181,11 @@ export default function Navbar() {
     profileImageSource?.secure_url ||
     DEFAULT_PROFILE_IMAGE;
 
+  // RETRY WHEN THE USER SAVES A NEW PROFILE PICTURE
+  useEffect(() => {
+    setImageError(false);
+  }, [profileImage]);
+
   const role = user?.role || "User";
 
   const isAdmin =
@@ -205,17 +210,17 @@ export default function Navbar() {
 
       <div className="nav-links">
 
-        <Link to="/">
+        <NavLink to="/" end>
           Home
-        </Link>
+        </NavLink>
 
-        <Link to="/courses">
+        <NavLink to="/courses">
           Courses
-        </Link>
+        </NavLink>
 
-        <Link to="/lms">
+        <NavLink to="/lms">
           LMS
-        </Link>
+        </NavLink>
 
         {!isAuthenticated && (
           <div className="auth-links">
