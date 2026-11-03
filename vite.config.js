@@ -13,7 +13,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Courses-learning-project/",
+  base: process.env.VERCEL ? "/" : "/Courses-learning-project/",
   server: {
     port: 5177,
     strictPort: true,
