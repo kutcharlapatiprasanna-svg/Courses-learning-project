@@ -19,8 +19,14 @@
 import axios from "axios";
 import { setupInterceptors } from "./interceptors";
 
+const apiBaseUrl =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.PROD
+    ? "https://mockapi-mauve.vercel.app/api/v1"
+    : "/api/v1");
+
 const axiosInstance = axios.create({
-  baseURL: "/api/v1",
+  baseURL: apiBaseUrl,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
