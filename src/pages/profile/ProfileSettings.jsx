@@ -10,6 +10,28 @@ import "./ProfileSettings.css";
 const DEFAULT_PROFILE_IMAGE =
   "https://i.pravatar.cc/150?img=47";
 
+// GET PROFILE IMAGE URL
+const getProfileImage = (profile) => {
+  const image =
+    profile?.profilePicture ||
+    profile?.avatar ||
+    profile?.image;
+
+  if (typeof image === "string") {
+    return image;
+  }
+
+  if (typeof image === "object" && image !== null) {
+    return (
+      image.url ||
+      image.secure_url ||
+      DEFAULT_PROFILE_IMAGE
+    );
+  }
+
+  return DEFAULT_PROFILE_IMAGE;
+};
+
 export default function ProfileSettings() {
   const { user, updateUser } = useAuth();
 
@@ -20,10 +42,7 @@ export default function ProfileSettings() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const [previewImage, setPreviewImage] = useState(
-    user?.profilePicture ||
-      user?.avatar ||
-      user?.image ||
-      DEFAULT_PROFILE_IMAGE
+    () => getProfileImage(user)
   );
 
   const [loading, setLoading] = useState(false);
@@ -34,7 +53,10 @@ export default function ProfileSettings() {
   // CLEAN UP PREVIEW IMAGE URL
   useEffect(() => {
     return () => {
-      if (previewImage?.startsWith("blob:")) {
+      if (
+        typeof previewImage === "string" &&
+        previewImage.startsWith("blob:")
+      ) {
         URL.revokeObjectURL(previewImage);
       }
     };
@@ -95,7 +117,7 @@ export default function ProfileSettings() {
 
       const response = await updateMyProfile(formData);
 
-      // Map this according to your actual backend response.
+      // GET UPDATED USER FROM API RESPONSE
       const updatedUser =
         response?.user ||
         response?.data?.user ||
@@ -107,17 +129,13 @@ export default function ProfileSettings() {
         name: updatedUser.name || name.trim(),
       };
 
+      // UPDATE AUTH CONTEXT
       updateUser(finalUser);
 
-      // Use the server-returned image if available.
-      const returnedImage =
-        finalUser.profilePicture ||
-        finalUser.avatar ||
-        finalUser.image;
+      // UPDATE PROFILE IMAGE
+      const returnedImage = getProfileImage(finalUser);
 
-      if (returnedImage) {
-        setPreviewImage(returnedImage);
-      }
+      setPreviewImage(returnedImage);
 
       setSelectedImage(null);
 
@@ -292,3 +310,4 @@ export default function ProfileSettings() {
     </div>
   );
 }
+  
