@@ -17,4 +17,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Deploy to GitHub Pages
 
-Run `npm run deploy` to build the app and publish the `dist` folder to the `gh-pages` branch. The site is available at <https://kutcharlapatiprasanna-svg.github.io/skillora-lms-project/>.
+Run `npm run deploy` to build the app and publish the `dist` folder to the `gh-pages` branch. The site is available at <https://kutcharlapatiprasanna-svg.github.io/Courses-learning-project/>.
