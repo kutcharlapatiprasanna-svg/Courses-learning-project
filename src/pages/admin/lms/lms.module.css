@@ -13,7 +13,7 @@
   gap: 12px;
   padding: 16px 20px;
   border-radius: 12px;
-  background: linear-gradient(120deg, #24445c, #397f86);
+  background: linear-gradient(120deg, #202940, #4b4038);
   color: #fff;
   margin-bottom: 24px;
 }
@@ -21,6 +21,7 @@
 .header h1 {
   font-size: 22px;
   margin: 0;
+  color: #f7f5f3 !important;
 }
 
 .nav {
@@ -32,7 +33,7 @@
 .navLink {
   padding: 7px 14px;
   border-radius: 20px;
-  color: #fff;
+  color: #f7f5f3 !important;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -40,13 +41,13 @@
 }
 
 .navLink:hover {
-  background: rgba(255, 255, 255, .15);
+  background: #4b4038;
 }
 
 .navActive {
-  background: #fff;
-  color: #24445c;
-  border-color: #fff;
+  background: #caaa98;
+  color: #202940 !important;
+  border-color: #caaa98;
 }
 
 .section {

@@ -5,6 +5,7 @@ import AppRoutes from "../routes/AppRoutes";
 import "../styles/global.css";
 import "../styles/Auth.css";
 import "../styles/Pages.css";
+import "../styles/theme.css";
 
 export default function App() {
   return <AppRoutes />;

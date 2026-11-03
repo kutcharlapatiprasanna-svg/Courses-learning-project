@@ -1,0 +1,247 @@
+:root {
+  --theme-navy: #202940;
+  --theme-brown: #4b4038;
+  --theme-taupe: #9a8678;
+  --theme-beige: #caaa98;
+  --theme-page: #f7f5f3;
+  --theme-surface: #fff;
+  --theme-text: #302a27;
+  --theme-muted: #70645d;
+  --theme-border: #e4d8d1;
+
+  --nav-bg: var(--theme-navy);
+  --nav-border: var(--theme-brown);
+  --brand: var(--theme-beige);
+  --brand-hover: var(--theme-brown);
+  --nav-text: #f7f5f3;
+  --nav-muted: var(--theme-beige);
+  --dropdown-bg: var(--theme-navy);
+  --dropdown-hover: var(--theme-brown);
+  --heading: #f7f5f3;
+  --border: var(--theme-brown);
+  --accent: var(--theme-beige);
+}
+
+body {
+  color: var(--theme-text);
+  background: var(--theme-page);
+}
+
+body :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--theme-navy) !important;
+}
+
+a {
+  color: var(--theme-brown);
+}
+
+a:hover {
+  color: var(--theme-navy);
+}
+
+button:not([class*="danger"]):not([class*="delete"]):not([class*="remove"]):not([class*="cancel"]),
+input[type="submit"],
+[class*="primary-button"],
+[class*="save-button"] {
+  border-color: var(--theme-navy) !important;
+  background-color: var(--theme-navy) !important;
+  color: #f7f5f3 !important;
+}
+
+button:not([class*="danger"]):not([class*="delete"]):not([class*="remove"]):not([class*="cancel"]):hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled),
+[class*="primary-button"]:hover,
+[class*="save-button"]:hover {
+  border-color: var(--theme-brown) !important;
+  background-color: var(--theme-brown) !important;
+}
+
+[class*="ghost"],
+[class*="secondary-button"],
+[class*="cancel-button"] {
+  border-color: var(--theme-brown) !important;
+  background-color: var(--theme-beige) !important;
+  color: var(--theme-navy) !important;
+}
+
+[class*="ghost"]:hover:not(:disabled),
+[class*="secondary-button"]:hover,
+[class*="cancel-button"]:hover {
+  background-color: #e2d4cb !important;
+}
+
+.navbar,
+.admin-sidebar,
+.admin-logo,
+.profile-dropdown {
+  border-color: var(--theme-brown) !important;
+  background-color: var(--theme-navy) !important;
+}
+
+.navbar,
+.navbar a,
+.admin-sidebar,
+.admin-sidebar a,
+.admin-sidebar h2,
+.admin-sidebar h3,
+.admin-logo,
+.profile-dropdown,
+.profile-dropdown a {
+  color: #f7f5f3 !important;
+}
+
+.navbar a:hover,
+.admin-sidebar a:hover {
+  color: var(--theme-beige) !important;
+}
+
+.admin-sidebar a.active,
+.admin-sidebar a[aria-current="page"] {
+  color: var(--theme-navy) !important;
+}
+
+.admin-main-header h2 {
+  color: #f7f5f3 !important;
+}
+
+.admin-main-header p {
+  color: var(--theme-beige) !important;
+}
+
+.admin-sidebar .admin-nav-link.active {
+  border-color: var(--theme-beige) !important;
+  background-color: var(--theme-beige) !important;
+  color: var(--theme-navy) !important;
+}
+
+.admin-sidebar .admin-nav-link.active span {
+  color: var(--theme-navy) !important;
+}
+
+.courses-page {
+  --ink: var(--theme-navy);
+  --ink-2: var(--theme-brown);
+  --teal: var(--theme-brown);
+  --teal-dark: var(--theme-navy);
+  --mint: var(--theme-beige);
+  --title: var(--theme-navy);
+  --line: var(--theme-border);
+  --soft: var(--theme-page);
+  --muted: var(--theme-muted);
+}
+
+.home-hero,
+.courses-hero,
+.home-course-card,
+.courses-card {
+  background-color: var(--theme-page);
+}
+
+.home-hero {
+  background: linear-gradient(125deg, var(--theme-navy), var(--theme-brown)) !important;
+}
+
+.courses-hero,
+[class*="lmsCard"] {
+  background: linear-gradient(120deg, var(--theme-navy), var(--theme-brown)) !important;
+}
+
+article[class*="card"],
+div[class*="card"],
+[class*="panel"],
+[class*="modal"],
+[class*="table-container"] {
+  border-color: var(--theme-border) !important;
+}
+
+.register-link,
+.page-button,
+a[class*="btn"],
+a[class*="button"] {
+  border-color: var(--theme-navy) !important;
+  background-color: var(--theme-navy) !important;
+  color: #f7f5f3 !important;
+}
+
+.register-link:hover,
+.page-button:hover,
+a[class*="btn"]:hover,
+a[class*="button"]:hover {
+  border-color: var(--theme-brown) !important;
+  background-color: var(--theme-brown) !important;
+}
+
+.home-hero h1,
+.home-hero p,
+.courses-hero h1,
+.courses-hero p,
+[class*="lmsCard"] h1,
+[class*="lmsCard"] h2,
+[class*="lmsCard"] h3,
+[class*="lmsCard"] p {
+  color: #f7f5f3 !important;
+}
+
+.courses-view-link,
+.home-text-link {
+  color: var(--theme-brown) !important;
+}
+
+.courses-view-link:hover,
+.home-text-link:hover {
+  color: var(--theme-navy) !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  accent-color: var(--theme-brown);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--theme-brown) !important;
+  outline-color: var(--theme-taupe);
+  box-shadow: 0 0 0 3px rgb(154 134 120 / 20%) !important;
+}
+
+hr,
+[class*="divider"],
+[class*="border"] {
+  border-color: var(--theme-border);
+}
+
+.courses-page,
+.profile-settings-page,
+.admin-panel,
+.admin-main,
+.admin-dashboard-layout,
+.admin-dashboard-content,
+.site-layout-page,
+.page-container {
+  background-color: var(--theme-page);
+  color: var(--theme-text);
+}
+
+.courses-level,
+.courses-category,
+[class*="badge"],
+.chip,
+.layout-tabs button.active,
+.admin-nav-link.active {
+  border-color: var(--theme-beige) !important;
+  background-color: var(--theme-beige) !important;
+  color: var(--theme-navy) !important;
+}
+
+.loader {
+  border-color: var(--theme-border);
+  border-top-color: var(--theme-brown);
+}
+
+.loader-container p,
+.muted,
+.page-description {
+  color: var(--theme-muted);
+}

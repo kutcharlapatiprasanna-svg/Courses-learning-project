@@ -46,8 +46,8 @@ const Home = () => {
           </span>
 
           <h1>
-            Unlock Your Potential Through Learning
-            <span>new today</span>
+            Unlock your potential.
+            <span>Learn something new today.</span>
           </h1>
 
           <p>

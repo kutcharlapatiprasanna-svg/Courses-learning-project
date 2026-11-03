@@ -93,7 +93,7 @@ const LmsLecture = () => {
           <Player key={lectureId} lecture={lec} lectureId={lectureId} />
         </div>
 
-        <h2 style={{ margin: "14px 0 6px", color: "#32136c" }}>{lec.title}</h2>
+        <h2 style={{ margin: "14px 0 6px", color: "var(--theme-espresso)" }}>{lec.title}</h2>
         <p className={S.muted}>{lec.description}</p>
 
         {progress !== null && (
