@@ -2,8 +2,8 @@
   width: 100%;
   min-height: 100vh;
   padding: 32px;
-  background: #f5f7fb;
-  color: #172033;
+  background: #f4f7f5;
+  color: #1b2a22;
 }
 
 .header {
@@ -16,7 +16,7 @@
 
 .eyebrow {
   margin: 0 0 7px;
-  color: #64748b;
+  color: #52665b;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -30,7 +30,7 @@
 
 .subtitle {
   margin: 8px 0 0;
-  color: #64748b;
+  color: #52665b;
   font-size: 14px;
 }
 
@@ -39,8 +39,8 @@
   border: none;
   border-radius: 8px;
   padding: 11px 18px;
-  background: #2457d6;
-  color: #fff;
+  background: #456654;
+  color: #f4f7f5;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -48,7 +48,7 @@
 
 .refreshButton:hover,
 .primaryButton:hover {
-  background: #1945b4;
+  background: #3c5a4a;
 }
 
 .refreshButton:disabled,
@@ -63,8 +63,8 @@
   gap: 8px;
   margin-bottom: 20px;
   padding: 8px;
-  background: #fff;
-  border: 1px solid #e5eaf2;
+  background: #f4f7f5;
+  border: 1px solid #cfded5;
   border-radius: 12px;
 }
 
@@ -74,29 +74,29 @@
   border-radius: 7px;
   padding: 10px 16px;
   background: transparent;
-  color: #64748b;
+  color: #52665b;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .tab:hover {
-  background: #f1f5f9;
-  color: #172033;
+  background: #e8efea;
+  color: #1b2a22;
 }
 
 .activeTab {
-  background: #eaf0ff;
-  color: #2457d6;
+  background: #e8efea;
+  color: #456654;
 }
 
 .panel {
   min-width: 0;
   padding: 24px;
-  background: #fff;
-  border: 1px solid #e5eaf2;
+  background: #f4f7f5;
+  border: 1px solid #cfded5;
   border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 3px 12px rgba(27, 42, 34, 0.03);
 }
 
 .panelHeader {
@@ -114,7 +114,7 @@
 }
 
 .panelHeader span {
-  color: #94a3b8;
+  color: #6e917f;
   font-size: 12px;
 }
 
@@ -126,21 +126,21 @@
 
 .statCard {
   padding: 22px;
-  background: #f8faff;
-  border: 1px solid #e5eaf2;
+  background: #f4f7f5;
+  border: 1px solid #cfded5;
   border-radius: 10px;
 }
 
 .statCard p {
   margin: 0 0 12px;
-  color: #64748b;
+  color: #52665b;
   font-size: 13px;
   font-weight: 600;
 }
 
 .statCard h2 {
   margin: 0;
-  color: #172033;
+  color: #1b2a22;
   font-size: 28px;
   font-weight: 750;
 }
@@ -148,7 +148,7 @@
 .tableWrapper {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #e5eaf2;
+  border: 1px solid #cfded5;
   border-radius: 9px;
 }
 
@@ -161,8 +161,8 @@
 
 .table th {
   padding: 14px 15px;
-  background: #f8faff;
-  color: #475569;
+  background: #f4f7f5;
+  color: #515f58;
   font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
@@ -170,18 +170,18 @@
 
 .table td {
   padding: 14px 15px;
-  border-top: 1px solid #edf0f5;
-  color: #334155;
+  border-top: 1px solid #e8efea;
+  color: #2d4337;
   font-size: 13px;
   vertical-align: middle;
 }
 
 .table tbody tr:hover {
-  background: #fafcff;
+  background: #f4f7f5;
 }
 
 .table a {
-  color: #2457d6;
+  color: #456654;
   text-decoration: none;
   font-weight: 600;
 }
@@ -199,8 +199,8 @@
   display: inline-block;
   padding: 5px 9px;
   border-radius: 20px;
-  background: #eef2ff;
-  color: #3949ab;
+  background: #e8efea;
+  color: #3c5a4a;
   font-size: 11px;
   font-weight: 700;
 }
@@ -215,37 +215,37 @@
 .actionGroup select {
   max-width: 130px;
   padding: 7px;
-  border: 1px solid #dce3ed;
+  border: 1px solid #cfded5;
   border-radius: 6px;
-  background: #fff;
-  color: #334155;
+  background: #f4f7f5;
+  color: #2d4337;
   font-size: 12px;
 }
 
 .smallButton,
 .dangerButton {
   padding: 7px 10px;
-  border: 1px solid #dce3ed;
+  border: 1px solid #cfded5;
   border-radius: 6px;
-  background: #fff;
-  color: #334155;
+  background: #f4f7f5;
+  color: #2d4337;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .smallButton:hover {
-  background: #eef2ff;
-  color: #2457d6;
+  background: #e8efea;
+  color: #456654;
 }
 
 .dangerButton {
-  border-color: #fecaca;
-  color: #dc2626;
+  border-color: #cfded5;
+  color: #456654;
 }
 
 .dangerButton:hover {
-  background: #fef2f2;
+  background: #f4f7f5;
 }
 
 .smallButton:disabled,
@@ -257,9 +257,9 @@
 .form {
   margin-bottom: 24px;
   padding: 20px;
-  border: 1px solid #e5eaf2;
+  border: 1px solid #cfded5;
   border-radius: 10px;
-  background: #fbfcff;
+  background: #f4f7f5;
 }
 
 .form h3 {
@@ -280,29 +280,29 @@
   width: 100%;
   min-width: 0;
   padding: 11px 12px;
-  border: 1px solid #dce3ed;
+  border: 1px solid #cfded5;
   border-radius: 7px;
   outline: none;
-  background: #fff;
-  color: #172033;
+  background: #f4f7f5;
+  color: #1b2a22;
   font-size: 13px;
 }
 
 .formGrid input:focus,
 .formGrid select:focus {
-  border-color: #2457d6;
-  box-shadow: 0 0 0 3px rgba(36, 87, 214, 0.1);
+  border-color: #456654;
+  box-shadow: 0 0 0 3px rgba(69, 102, 84, 0.1);
 }
 
 .formGrid input::placeholder {
-  color: #94a3b8;
+  color: #6e917f;
 }
 
 .dateField {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  color: #64748b;
+  color: #52665b;
   font-size: 12px;
 }
 
@@ -314,13 +314,13 @@
 
 .empty {
   padding: 28px 12px;
-  color: #94a3b8;
+  color: #6e917f;
   text-align: center;
 }
 
 .loading {
   padding: 50px 15px;
-  color: #64748b;
+  color: #52665b;
   text-align: center;
   font-size: 14px;
 }

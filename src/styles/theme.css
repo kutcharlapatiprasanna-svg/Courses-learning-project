@@ -1,23 +1,24 @@
 :root {
-  --theme-navy: #202940;
-  --theme-brown: #4b4038;
-  --theme-taupe: #9a8678;
-  --theme-beige: #caaa98;
-  --theme-page: #f7f5f3;
-  --theme-surface: #fff;
-  --theme-text: #302a27;
-  --theme-muted: #70645d;
-  --theme-border: #e4d8d1;
+  --theme-navy: #344e41;
+  --theme-brown: #263a30;
+  --theme-taupe: #5c7a69;
+  --theme-beige: #cfded5;
+  --theme-page: #f4f7f5;
+  --theme-surface: #f4f7f5;
+  --theme-text: #1f2e27;
+  --theme-muted: #5c6f64;
+  --theme-border: #d6e1da;
+  --theme-espresso: #1b2a22;
 
   --nav-bg: var(--theme-navy);
   --nav-border: var(--theme-brown);
   --brand: var(--theme-beige);
   --brand-hover: var(--theme-brown);
-  --nav-text: #f7f5f3;
+  --nav-text: #f4f7f5;
   --nav-muted: var(--theme-beige);
   --dropdown-bg: var(--theme-navy);
   --dropdown-hover: var(--theme-brown);
-  --heading: #f7f5f3;
+  --heading: #f4f7f5;
   --border: var(--theme-brown);
   --accent: var(--theme-beige);
 }
@@ -45,7 +46,7 @@ input[type="submit"],
 [class*="save-button"] {
   border-color: var(--theme-navy) !important;
   background-color: var(--theme-navy) !important;
-  color: #f7f5f3 !important;
+  color: #f4f7f5 !important;
 }
 
 button:not([class*="danger"]):not([class*="delete"]):not([class*="remove"]):not([class*="cancel"]):hover:not(:disabled),
@@ -67,7 +68,7 @@ input[type="submit"]:hover:not(:disabled),
 [class*="ghost"]:hover:not(:disabled),
 [class*="secondary-button"]:hover,
 [class*="cancel-button"]:hover {
-  background-color: #e2d4cb !important;
+  background-color: #dbe6df !important;
 }
 
 .navbar,
@@ -87,7 +88,7 @@ input[type="submit"]:hover:not(:disabled),
 .admin-logo,
 .profile-dropdown,
 .profile-dropdown a {
-  color: #f7f5f3 !important;
+  color: #f4f7f5 !important;
 }
 
 .navbar a:hover,
@@ -101,7 +102,7 @@ input[type="submit"]:hover:not(:disabled),
 }
 
 .admin-main-header h2 {
-  color: #f7f5f3 !important;
+  color: #f4f7f5 !important;
 }
 
 .admin-main-header p {
@@ -160,7 +161,7 @@ a[class*="btn"],
 a[class*="button"] {
   border-color: var(--theme-navy) !important;
   background-color: var(--theme-navy) !important;
-  color: #f7f5f3 !important;
+  color: #f4f7f5 !important;
 }
 
 .register-link:hover,
@@ -179,7 +180,7 @@ a[class*="button"]:hover {
 [class*="lmsCard"] h2,
 [class*="lmsCard"] h3,
 [class*="lmsCard"] p {
-  color: #f7f5f3 !important;
+  color: #f4f7f5 !important;
 }
 
 .courses-view-link,
@@ -203,7 +204,7 @@ select:focus,
 textarea:focus {
   border-color: var(--theme-brown) !important;
   outline-color: var(--theme-taupe);
-  box-shadow: 0 0 0 3px rgb(154 134 120 / 20%) !important;
+  box-shadow: 0 0 0 3px rgba(52, 78, 65, 0.2) !important;
 }
 
 hr,

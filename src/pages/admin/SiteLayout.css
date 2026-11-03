@@ -3,8 +3,8 @@
 .site-layout-page {
   min-height: 100vh;
   padding: 30px;
-  background: #f1f5f9;
-  color: #1e293b;
+  background: #e8efea;
+  color: #24372c;
   font-family: Arial, sans-serif;
 }
 
@@ -15,12 +15,12 @@
 
 .site-layout-heading h2 {
   margin: 0 0 8px;
-  color: #17365d;
+  color: #24372c;
   font-size: 26px;
 }
 
 .site-layout-heading p {
-  color: #64748b;
+  color: #52665b;
   font-size: 14px;
 }
 
@@ -30,18 +30,18 @@
   gap: 0;
   margin-bottom: 20px;
   overflow: hidden;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #a3bcae;
   border-radius: 8px;
-  background: #ffffff;
+  background: #f4f7f5;
 }
 
 .layout-tabs button {
   flex: 1;
   padding: 14px;
   border: none;
-  border-right: 1px solid #cbd5e1;
-  background: #dbeafe;
-  color: #1e3a5f;
+  border-right: 1px solid #a3bcae;
+  background: #cfded5;
+  color: #2d4337;
   font-weight: 600;
   cursor: pointer;
 }
@@ -51,29 +51,29 @@
 }
 
 .layout-tabs button:hover {
-  background: #bfdbfe;
+  background: #cfded5;
 }
 
 .layout-tabs button.active {
-  background: #1d4ed8;
-  color: #ffffff;
+  background: #456654;
+  color: #f4f7f5;
 }
 
 /* Main Panel */
 .layout-panel {
   padding: 24px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #a3bcae;
   border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  background: #f4f7f5;
+  box-shadow: 0 2px 6px rgba(27, 42, 34, 0.06);
 }
 
 .layout-panel h3 {
   margin: 0 0 20px;
   padding: 13px 16px;
   border-radius: 5px;
-  background: #17365d;
-  color: #ffffff;
+  background: #24372c;
+  color: #f4f7f5;
   font-size: 18px;
 }
 
@@ -81,7 +81,7 @@
 .layout-panel label {
   display: block;
   margin: 16px 0 7px;
-  color: #334155;
+  color: #2d4337;
   font-size: 14px;
   font-weight: 600;
 }
@@ -92,18 +92,18 @@
   box-sizing: border-box;
   width: 100%;
   padding: 11px 12px;
-  border: 1px solid #b8c7d9;
+  border: 1px solid #a3bcae;
   border-radius: 5px;
-  background: #f8fafc;
-  color: #1e293b;
+  background: #f4f7f5;
+  color: #24372c;
   font-size: 14px;
 }
 
 .layout-panel input:focus,
 .layout-panel textarea:focus {
-  border-color: #2563eb;
-  outline: 2px solid #dbeafe;
-  background: #ffffff;
+  border-color: #456654;
+  outline: 2px solid #cfded5;
+  background: #f4f7f5;
 }
 
 .layout-panel textarea {
@@ -114,13 +114,13 @@
 .layout-item {
   margin-bottom: 16px;
   padding: 18px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #a3bcae;
   border-radius: 5px;
-  background: #f8fafc;
+  background: #f4f7f5;
 }
 
 .layout-item:nth-of-type(even) {
-  background: #eff6ff;
+  background: #e8efea;
 }
 
 /* Category Rows */
@@ -130,9 +130,9 @@
   gap: 12px;
   margin-bottom: 10px;
   padding: 12px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #a3bcae;
   border-radius: 5px;
-  background: #f8fafc;
+  background: #f4f7f5;
 }
 
 .category-item input {
@@ -143,17 +143,17 @@
 /* Buttons */
 .layout-panel button {
   padding: 10px 18px;
-  border: 1px solid #1d4ed8;
+  border: 1px solid #456654;
   border-radius: 5px;
-  background: #2563eb;
-  color: #ffffff;
+  background: #456654;
+  color: #f4f7f5;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .layout-panel button:hover:not(:disabled) {
-  background: #1e40af;
+  background: #3c5a4a;
 }
 
 .layout-panel button:disabled {
@@ -163,25 +163,25 @@
 
 /* Add Buttons */
 .layout-panel button.secondary-button {
-  border-color: #047857;
-  background: #059669;
-  color: #ffffff;
+  border-color: #2d4337;
+  background: #344e41;
+  color: #f4f7f5;
 }
 
 .layout-panel button.secondary-button:hover:not(:disabled) {
-  background: #047857;
+  background: #2d4337;
 }
 
 /* Remove Buttons */
 .layout-panel button.remove-button {
   flex-shrink: 0;
-  border-color: #dc2626;
-  background: #fee2e2;
-  color: #b91c1c;
+  border-color: #456654;
+  background: #e8efea;
+  color: #3c5a4a;
 }
 
 .layout-panel button.remove-button:hover:not(:disabled) {
-  background: #fecaca;
+  background: #cfded5;
 }
 
 /* Action Buttons */
@@ -199,7 +199,7 @@
   width: 400px;
   max-height: 220px;
   margin-top: 16px;
-  border: 1px solid #94a3b8;
+  border: 1px solid #6e917f;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -207,31 +207,31 @@
 /* Status Messages */
 .layout-hint {
   padding: 12px;
-  border: 1px solid #fcd34d;
+  border: 1px solid #517663;
   border-radius: 5px;
-  background: #fffbeb;
-  color: #92400e;
+  background: #e8efea;
+  color: #344e41;
 }
 
 .layout-success {
   padding: 12px;
-  border: 1px solid #86efac;
+  border: 1px solid #6e917f;
   border-radius: 5px;
-  background: #dcfce7;
-  color: #166534;
+  background: #cfded5;
+  color: #2d4337;
 }
 
 .layout-error {
   padding: 12px;
-  border: 1px solid #fca5a5;
+  border: 1px solid #a3bcae;
   border-radius: 5px;
-  background: #fee2e2;
-  color: #991b1b;
+  background: #e8efea;
+  color: #344e41;
 }
 
 .layout-loading {
   padding: 30px;
-  color: #1d4ed8;
+  color: #456654;
   text-align: center;
   font-weight: 600;
 }
@@ -263,94 +263,94 @@
 .site-layout-page {
   min-height: 100vh;
   padding: 30px;
-  background: #e9eef5;
-  color: #1e293b;
+  background: #e8efea;
+  color: #24372c;
   font-family: Arial, sans-serif;
 }
 
-/* White content panel */
+/* #f4f7f5 content panel */
 .layout-panel {
   padding: 26px;
-  background: #ffffff;
-  border: 1px solid #d5deea;
+  background: #f4f7f5;
+  border: 1px solid #cfded5;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(30, 41, 59, 0.07);
+  box-shadow: 0 4px 16px rgba(36, 55, 44, 0.07);
 }
 
 /* Navy section heading */
 .layout-panel h3 {
   padding: 14px 18px;
-  background: #243b5a;
-  color: #ffffff;
+  background: #2d4337;
+  color: #f4f7f5 !important;
   border-radius: 6px;
 }
 
 /* Professional tab colors */
 .layout-tabs {
-  background: #ffffff;
-  border: 1px solid #d5deea;
+  background: #f4f7f5;
+  border: 1px solid #cfded5;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .layout-tabs button {
-  background: #f1f5f9;
-  color: #334155;
+  background: #e8efea;
+  color: #2d4337;
   border: none;
   padding: 14px 20px;
 }
 
 .layout-tabs button.active {
-  background: #315b8a;
-  color: #ffffff;
+  background: #344e41;
+  color: #f4f7f5;
 }
 
 /* Form fields */
 .layout-panel input,
 .layout-panel textarea {
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  color: #1e293b;
+  background: #f4f7f5;
+  border: 1px solid #a3bcae;
+  color: #24372c;
   border-radius: 6px;
 }
 
 /* Primary save button */
 .layout-panel button {
-  background: #315b8a;
-  color: #ffffff;
-  border: 1px solid #315b8a;
+  background: #344e41;
+  color: #f4f7f5;
+  border: 1px solid #344e41;
   border-radius: 6px;
 }
 
 .layout-panel button:hover:not(:disabled) {
-  background: #243b5a;
+  background: #2d4337;
 }
 
 /* Add button */
 .layout-panel button.secondary-button {
   background: #e0f2e9;
-  color: #176747;
+  color: #2d4337;
   border-color: #b7dfcc;
 }
 
 /* Remove button */
 .layout-panel button.remove-button {
-  background: #fff1f2;
-  color: #be123c;
-  border-color: #fecdd3;
+  background: #f4f7f5;
+  color: #3c5a4a;
+  border-color: #cfded5;
 }
 
 /* FAQ and category rows */
 .layout-item,
 .category-item {
-  background: #f5f8fc;
-  border: 1px solid #dbe4ef;
+  background: #f4f7f5;
+  border: 1px solid #cfded5;
   border-radius: 7px;
 }
 
 /* Image preview */
 .banner-preview {
-  border: 2px solid #d5deea;
+  border: 2px solid #cfded5;
   border-radius: 8px;
 }
 

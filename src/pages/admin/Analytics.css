@@ -2,8 +2,8 @@
 
 .analytics-page {
   padding: 24px;
-  color: #1f2937;
-  background: #f8fafc;
+  color: #24372c;
+  background: #f4f7f5;
   min-height: 100vh;
 }
 
@@ -22,12 +22,12 @@
 
 .analytics-heading p {
   margin: 0;
-  color: #64748b;
+  color: #52665b;
 }
 
 .analytics-heading > span {
-  background: #e8efff;
-  color: #3157b7;
+  background: #e8efea;
+  color: #3c5a4a;
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 13px;
@@ -41,16 +41,16 @@
 }
 
 .analytics-card {
-  background: white;
+  background: #f4f7f5;
   padding: 22px;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 2px 8px #0f172a08;
+  border: 1px solid #cfded5;
+  box-shadow: 0 2px 8px #1b2a2208;
 }
 
 .analytics-card p {
   margin: 0 0 12px;
-  color: #64748b;
+  color: #52665b;
   font-size: 14px;
 }
 
@@ -60,22 +60,22 @@
 }
 
 .users-card {
-  border-top: 4px solid #3b82f6;
+  border-top: 4px solid #517663;
 }
 
 .courses-card {
-  border-top: 4px solid #22c55e;
+  border-top: 4px solid #3c5a4a;
 }
 
 .orders-card {
-  border-top: 4px solid #a855f7;
+  border-top: 4px solid #6e917f;
 }
 
 .analytics-chart {
-  background: white;
+  background: #f4f7f5;
   padding: 22px;
   margin-bottom: 20px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cfded5;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -105,7 +105,7 @@
 .bar-count,
 .bar-month {
   font-size: 12px;
-  color: #64748b;
+  color: #52665b;
   white-space: nowrap;
 }
 
@@ -115,7 +115,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cfded5;
 }
 
 .chart-bar {
@@ -126,25 +126,25 @@
 }
 
 .chart-bar.blue {
-  background: #60a5fa;
+  background: #6e917f;
 }
 
 .chart-bar.green {
-  background: #4ade80;
+  background: #517663;
 }
 
 .chart-bar.purple {
-  background: #c084fc;
+  background: #a3bcae;
 }
 
 .no-data {
   text-align: center;
-  color: #64748b;
+  color: #52665b;
   padding: 40px 0;
 }
 
 .analytics-error {
-  color: #dc2626;
+  color: #456654;
   padding: 20px;
 }
 

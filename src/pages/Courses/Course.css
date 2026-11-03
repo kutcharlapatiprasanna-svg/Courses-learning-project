@@ -5,15 +5,15 @@
    ===================================================================== */
 
 .courses-page {
-  --ink: #142b3b;
-  --ink-2: #244f60;
-  --teal: #397f86;
-  --teal-dark: #28756f;
-  --mint: #e4f3f1;
-  --title: #24445c;
-  --line: #e0e9ec;
-  --soft: #f4f8f9;
-  --muted: #657782;
+  --ink: #1b2a22;
+  --ink-2: #2d4337;
+  --teal: #344e41;
+  --teal-dark: #344e41;
+  --mint: #cfded5;
+  --title: #2d4337;
+  --line: #cfded5;
+  --soft: #e8efea;
+  --muted: #6a7d73;
 
   max-width: 1440px;
   margin: 0 auto;
@@ -33,7 +33,7 @@
   padding: 64px 6% 80px;
   border-radius: 22px;
   text-align: center;
-  color: #fff;
+  color: #f4f7f5;
   background: linear-gradient(120deg, var(--ink), var(--ink-2));
 }
 
@@ -44,8 +44,8 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
-  color: #9fe0dc;
-  background: rgba(255, 255, 255, 0.1);
+  color: #a3bcae;
+  background: rgba(244, 247, 245, 0.1);
 }
 
 .courses-hero h1 {
@@ -56,7 +56,7 @@
 }
 
 .courses-hero h1 span {
-  color: #7fd6d1;
+  color: #6e917f;
 }
 
 .courses-hero p {
@@ -64,10 +64,10 @@
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.6;
-  color: #cfe0e6;
+  color: #cfded5;
 }
 
-/* ---------- 2. TOOLBAR: one white box, overlaps the hero ---------- */
+/* ---------- 2. TOOLBAR: one #f4f7f5 box, overlaps the hero ---------- */
 .courses-toolbar {
   position: relative;
   display: grid;
@@ -78,8 +78,8 @@
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 14px 34px rgba(36, 68, 92, 0.12);
+  background: #f4f7f5;
+  box-shadow: 0 14px 34px rgba(45, 67, 55, 0.12);
 }
 
 .courses-toolbar input,
@@ -103,9 +103,9 @@
 
 .courses-toolbar input:focus,
 .courses-toolbar select:focus {
-  background: #fff;
+  background: #f4f7f5;
   border-color: var(--teal);
-  box-shadow: 0 0 0 4px rgba(57, 127, 134, 0.15);
+  box-shadow: 0 0 0 4px rgba(52, 78, 65, 0.15);
 }
 
 /* ---------- 3. RESULTS HEADER ---------- */
@@ -148,14 +148,14 @@
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(36, 68, 92, 0.04);
+  background: #f4f7f5;
+  box-shadow: 0 4px 16px rgba(45, 67, 55, 0.04);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .courses-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(36, 68, 92, 0.1);
+  box-shadow: 0 12px 28px rgba(45, 67, 55, 0.1);
 }
 
 .courses-card-image {
@@ -163,7 +163,7 @@
   display: block;
   height: 190px;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8f0f2, #d3e4e7);
+  background: linear-gradient(135deg, #cfded5, #cfded5);
 }
 
 .courses-card-image img {
@@ -237,7 +237,7 @@
   justify-content: space-between;
   gap: 12px;
   padding-top: 14px;
-  border-top: 1px solid #e9eff1;
+  border-top: 1px solid #cfded5;
 }
 
 .courses-card-footer strong {

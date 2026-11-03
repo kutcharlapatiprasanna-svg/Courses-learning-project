@@ -13,15 +13,15 @@
   gap: 12px;
   padding: 16px 20px;
   border-radius: 12px;
-  background: linear-gradient(120deg, #202940, #4b4038);
-  color: #fff;
+  background: linear-gradient(120deg, #24372c, #3c4742);
+  color: #f4f7f5;
   margin-bottom: 24px;
 }
 
 .header h1 {
   font-size: 22px;
   margin: 0;
-  color: #f7f5f3 !important;
+  color: #e8efea !important;
 }
 
 .nav {
@@ -33,21 +33,21 @@
 .navLink {
   padding: 7px 14px;
   border-radius: 20px;
-  color: #f7f5f3 !important;
+  color: #e8efea !important;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, .35);
+  border: 1px solid rgba(244, 247, 245, 0.35);
 }
 
 .navLink:hover {
-  background: #4b4038;
+  background: #3c4742;
 }
 
 .navActive {
-  background: #caaa98;
-  color: #202940 !important;
-  border-color: #caaa98;
+  background: #cfded5;
+  color: #1b2a22 !important;
+  border-color: #cfded5;
 }
 
 .section {
@@ -55,10 +55,10 @@
 }
 
 .section h2 {
-  color: #24445c;
+  color: #2d4337;
   font-size: 20px;
   margin-bottom: 14px;
-  border-bottom: 3px solid #d8e6e5;
+  border-bottom: 3px solid #cfded5;
   padding-bottom: 6px;
   display: flex;
   justify-content: space-between;
@@ -75,7 +75,7 @@
 .search input {
   flex: 1;
   padding: 12px 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #c8d0cc;
   border-radius: 6px;
   font-size: 15px;
 }
@@ -89,17 +89,17 @@
 .chip {
   padding: 7px 14px;
   border-radius: 20px;
-  border: 1px solid #c5d8d8;
-  background: #fff;
-  color: #356b73;
+  border: 1px solid #cbd2cf;
+  background: #f4f7f5;
+  color: #344e41;
   cursor: pointer;
   font-size: 13px;
   font-weight: 600;
 }
 
 .chip:hover {
-  background: #356b73;
-  color: #fff;
+  background: #344e41;
+  color: #f4f7f5;
 }
 
 .grid {
@@ -111,20 +111,20 @@
 .card {
   flex: 1 1 250px;
   max-width: 340px;
-  background: #fff;
-  border: 1px solid #e3e3e3;
+  background: #f4f7f5;
+  border: 1px solid #e1e5e3;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+  box-shadow: 0 2px 8px rgba(27, 42, 34, 0.06);
   position: relative;
   transition: transform .2s, box-shadow .2s;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(36, 68, 92, .16);
+  box-shadow: 0 8px 20px rgba(45, 67, 55, 0.16);
 }
 
 .card img {
@@ -143,12 +143,12 @@
 
 .cardBody h3 {
   font-size: 16px;
-  color: #24445c;
+  color: #2d4337;
 }
 
 .cardBody p {
   font-size: 13px;
-  color: #666;
+  color: #5e6e66;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -164,11 +164,11 @@
 
 .price {
   font-weight: 700;
-  color: #24445c;
+  color: #2d4337;
 }
 
 .price del {
-  color: #999;
+  color: #5c6f64;
   font-weight: 400;
   margin-left: 6px;
   font-size: 12px;
@@ -182,14 +182,14 @@
   height: 34px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, .92);
+  background: rgba(244, 247, 245, 0.92);
   cursor: pointer;
   font-size: 17px;
 }
 
 .btn {
-  background: #24445c;
-  color: #fff;
+  background: #2d4337;
+  color: #f4f7f5;
   border: none;
   padding: 10px 18px;
   border-radius: 6px;
@@ -201,7 +201,7 @@
 }
 
 .btn:hover:not(:disabled) {
-  background: #397f86;
+  background: #344e41;
 }
 
 .btn:disabled {
@@ -210,21 +210,21 @@
 }
 
 .btnGhost {
-  background: #fff;
-  color: #24445c;
-  border: 1px solid #24445c;
+  background: #f4f7f5;
+  color: #2d4337;
+  border: 1px solid #2d4337;
 }
 
 .btnGhost:hover:not(:disabled) {
-  background: #edf4f3;
+  background: #e8efea;
 }
 
 .btnDanger {
-  background: #dc3545;
+  background: #456654;
 }
 
 .btnDanger:hover:not(:disabled) {
-  background: #b02a37;
+  background: #3c5a4a;
 }
 
 .btnSm {
@@ -248,18 +248,18 @@
 .tab {
   padding: 9px 18px;
   border-radius: 20px;
-  border: 1px solid #c5d8d8;
-  background: #fff;
-  color: #356b73;
+  border: 1px solid #cbd2cf;
+  background: #f4f7f5;
+  color: #344e41;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
 }
 
 .tabActive {
-  background: #356b73;
-  color: #fff;
-  border-color: #356b73;
+  background: #344e41;
+  color: #f4f7f5;
+  border-color: #344e41;
 }
 
 .stats {
@@ -270,7 +270,7 @@
 }
 
 .stat {
-  background: #edf4f3;
+  background: #e8efea;
   border-radius: 10px;
   padding: 14px 16px;
 }
@@ -278,26 +278,26 @@
 .stat span {
   display: block;
   font-size: 12px;
-  color: #555;
+  color: #4e5c55;
 }
 
 .stat strong {
   font-size: 22px;
-  color: #24445c;
+  color: #2d4337;
   word-break: break-word;
 }
 
 .tableWrap {
   overflow-x: auto;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e1e5e3;
   border-radius: 8px;
   margin-bottom: 20px;
-  background: #fff;
+  background: #f4f7f5;
 }
 
 .tableTitle {
   font-size: 15px;
-  color: #356b73;
+  color: #344e41;
   margin: 14px 0 8px;
 }
 
@@ -311,13 +311,13 @@
 .table td {
   padding: 10px 12px;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #edefee;
   vertical-align: middle;
 }
 
 .table th {
-  background: #edf4f3;
-  color: #24445c;
+  background: #e8efea;
+  color: #2d4337;
   white-space: nowrap;
 }
 
@@ -331,30 +331,30 @@
   border-radius: 12px;
   font-size: 11px;
   font-weight: 700;
-  background: #e6e6e6;
-  color: #444;
+  background: #e4e8e6;
+  color: #3f4944;
 }
 
 .badgeOk {
-  background: #d9f2e0;
-  color: #1b6b35;
+  background: #cfded5;
+  color: #2d4337;
 }
 
 .badgeWarn {
-  background: #ffe9c7;
-  color: #8a5a00;
+  background: #cfded5;
+  color: #2d4337;
 }
 
 .progress {
   height: 8px;
-  background: #dceceb;
+  background: #cfded5;
   border-radius: 6px;
   overflow: hidden;
 }
 
 .progressBar {
   height: 100%;
-  background: linear-gradient(90deg, #397f86, #24445c);
+  background: linear-gradient(90deg, #344e41, #2d4337);
 }
 
 .detail {
@@ -370,13 +370,13 @@
 }
 
 .detail h1 {
-  color: #24445c;
+  color: #2d4337;
   font-size: 28px;
   margin-bottom: 10px;
 }
 
 .detail p {
-  color: #555;
+  color: #4e5c55;
   line-height: 1.6;
   margin-bottom: 10px;
 }
@@ -384,7 +384,7 @@
 .courseDetails {
   max-width: 1200px;
   padding-top: 28px;
-  color: #555;
+  color: #4e5c55;
 }
 
 .courseDetails .detail {
@@ -400,19 +400,19 @@
 }
 
 .courseDetails .badge {
-  color: #493584;
-  background: #f0eafa;
+  color: #344e41;
+  background: #e8efea;
 }
 
 .courseDetails .detail h1 {
   margin: 8px 0 14px;
-  color: #21116f;
+  color: #2d4337;
   font-size: clamp(28px, 3vw, 36px);
   line-height: 1.2;
 }
 
 .courseDetails .price {
-  color: #151515;
+  color: #131715;
   font-size: 20px;
 }
 
@@ -422,21 +422,21 @@
 }
 
 .courseDetails .btn {
-  background: #21116f;
+  background: #2d4337;
 }
 
 .courseDetails .btn:hover:not(:disabled) {
-  background: #38248e;
+  background: #344e41;
 }
 
 .courseDetails .btnGhost {
-  color: #21116f;
-  border-color: #21116f;
-  background: #fff;
+  color: #2d4337;
+  border-color: #2d4337;
+  background: #f4f7f5;
 }
 
 .courseDetails .btnGhost:hover:not(:disabled) {
-  background: #f5f2fb;
+  background: #e8efea;
 }
 
 .courseDetails .section {
@@ -445,8 +445,8 @@
 
 .courseDetails .section h2 {
   margin-bottom: 16px;
-  border-bottom: 2px solid #e8def8;
-  color: #452c82;
+  border-bottom: 2px solid #cfded5;
+  color: #344e41;
   font-size: 23px;
   font-weight: 500;
 }
@@ -459,7 +459,7 @@
 
 .courseEmpty {
   margin: 0;
-  color: #666;
+  color: #5e6e66;
   line-height: 1.6;
 }
 
@@ -468,8 +468,8 @@
 }
 
 .lectureGroup h3 {
-  background: #edf4f3;
-  color: #24445c;
+  background: #e8efea;
+  color: #2d4337;
   padding: 9px 14px;
   border-radius: 6px 6px 0 0;
   font-size: 15px;
@@ -481,9 +481,9 @@
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
-  border: 1px solid #eee;
+  border: 1px solid #edefee;
   border-top: none;
-  background: #fff;
+  background: #f4f7f5;
   cursor: pointer;
   font-size: 14px;
 }
@@ -493,16 +493,16 @@
 }
 
 .lectureLocked {
-  color: #999;
+  color: #5c6f64;
   cursor: not-allowed;
 }
 
 .reviewCard {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e1e5e3;
   border-radius: 8px;
   padding: 12px 14px;
   margin-bottom: 10px;
-  background: #fff;
+  background: #f4f7f5;
 }
 
 .lectureLayout {
@@ -518,21 +518,21 @@
   aspect-ratio: 16/9;
   border: 0;
   border-radius: 10px;
-  background: #000;
+  background: #1b2a22;
 }
 
 .side {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e1e5e3;
   border-radius: 10px;
-  background: #fff;
+  background: #f4f7f5;
   max-height: 75vh;
   overflow-y: auto;
 }
 
 .side h3 {
   padding: 12px 14px;
-  color: #24445c;
-  border-bottom: 1px solid #eee;
+  color: #2d4337;
+  border-bottom: 1px solid #edefee;
   font-size: 15px;
 }
 
@@ -541,8 +541,8 @@
   gap: 8px;
   padding: 10px 14px;
   font-size: 13px;
-  border-bottom: 1px solid #f1f1f1;
-  color: #333;
+  border-bottom: 1px solid #f0f2f1;
+  color: #2f3733;
   text-decoration: none;
 }
 
@@ -551,25 +551,25 @@
 }
 
 .sideActive {
-  background: #dceceb;
+  background: #cfded5;
   font-weight: 700;
 }
 
 .sideLocked {
-  color: #999;
+  color: #5c6f64;
   cursor: not-allowed;
 }
 
 .panel {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e1e5e3;
   border-radius: 10px;
   padding: 18px;
-  background: #fbfcfc;
+  background: #f4f7f5;
   margin-bottom: 22px;
 }
 
 .panel h3 {
-  color: #24445c;
+  color: #2d4337;
   margin-bottom: 12px;
 }
 
@@ -595,17 +595,17 @@
 .field label {
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: #2f3733;
 }
 
 .field input,
 .field select,
 .field textarea {
   padding: 10px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #c8d0cc;
   border-radius: 5px;
   font-size: 14px;
-  background: #fff;
+  background: #f4f7f5;
   width: 100%;
 }
 
@@ -618,7 +618,7 @@
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-color: #397f86;
+  border-color: #344e41;
 }
 
 .check {
@@ -634,16 +634,16 @@
 .empty {
   text-align: center;
   padding: 36px 16px;
-  color: #777;
-  background: #f5f8f8;
-  border: 1px dashed #c5d8d8;
+  color: #52665b;
+  background: #f6f7f7;
+  border: 1px dashed #cbd2cf;
   border-radius: 10px;
 }
 
 .error {
-  color: #b02a37;
-  background: #fdecee;
-  border: 1px solid #f3c2c8;
+  color: #3c5a4a;
+  background: #e8efea;
+  border: 1px solid #cfded5;
   padding: 12px 14px;
   border-radius: 8px;
   margin-bottom: 14px;
@@ -652,11 +652,11 @@
 .loading {
   text-align: center;
   padding: 40px 0;
-  color: #666;
+  color: #5e6e66;
 }
 
 .muted {
-  color: #777;
+  color: #52665b;
   font-size: 13px;
 }
 
@@ -669,15 +669,15 @@
   margin-top: 30px;
   padding: 26px 30px;
   border-radius: 14px;
-  background: linear-gradient(120deg, #24445c, #397f86);
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(36, 68, 92, .22);
+  background: linear-gradient(120deg, #2d4337, #344e41);
+  color: #f4f7f5;
+  box-shadow: 0 6px 20px rgba(45, 67, 55, 0.22);
 }
 
 .lmsCard h2 {
   font-size: 24px;
   margin-bottom: 6px;
-  color: #fff;
+  color: #f4f7f5;
   border: none;
   padding: 0;
 }
@@ -689,13 +689,13 @@
 }
 
 .lmsCard .btn {
-  background: #fff;
-  color: #24445c;
+  background: #f4f7f5;
+  color: #2d4337;
   padding: 12px 24px;
 }
 
 .lmsCard .btn:hover {
-  background: #dceceb;
+  background: #cfded5;
 }
 
 @media (max-width: 800px) {

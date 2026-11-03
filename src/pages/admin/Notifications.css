@@ -1,19 +1,19 @@
 
 .notifications-page {
   padding: 24px;
-  background: #f8fafc;
+  background: #f4f7f5;
   min-height: 100vh;
 }
 
 .notifications-page h2 {
   margin-bottom: 8px;
-  color: #1e293b;
+  color: #24372c;
   font-size: 26px;
   font-weight: 700;
 }
 
 .notifications-page > p {
-  color: #64748b;
+  color: #52665b;
   margin-bottom: 20px;
 }
 
@@ -27,34 +27,34 @@
   position: relative;
   padding: 20px;
   padding-right: 160px;
-  background: #ffffff;
-  border: 1px solid #dbeafe;
-  border-left: 5px solid #3b82f6;
+  background: #f4f7f5;
+  border: 1px solid #cfded5;
+  border-left: 5px solid #517663;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 2px 8px rgba(27, 42, 34, 0.05);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .notification-card:hover {
-  box-shadow: 0 5px 14px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 5px 14px rgba(27, 42, 34, 0.1);
   transform: translateY(-2px);
 }
 
 .notification-card h3 {
   margin: 0 0 8px;
-  color: #1e293b;
+  color: #24372c;
   font-size: 17px;
   font-weight: 600;
 }
 
 .notification-card p {
   margin: 0 0 12px;
-  color: #475569;
+  color: #515f58;
   line-height: 1.6;
 }
 
 .notification-card small {
-  color: #64748b;
+  color: #52665b;
   font-size: 12px;
 }
 
@@ -70,8 +70,8 @@
   padding: 9px 13px;
   border: none;
   border-radius: 6px;
-  background: #2563eb;
-  color: #ffffff;
+  background: #456654;
+  color: #f4f7f5;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
@@ -79,7 +79,7 @@
 }
 
 .notification-action button:hover {
-  background: #1d4ed8;
+  background: #456654;
 }
 
 .notification-action button:disabled {
@@ -91,14 +91,14 @@
   display: inline-block;
   padding: 6px 12px;
   border-radius: 20px;
-  background: #dcfce7;
-  color: #166534;
+  background: #cfded5;
+  color: #2d4337;
   font-size: 12px;
   font-weight: 600;
 }
 
 .notification-error {
-  color: #dc2626;
+  color: #456654;
 }
 
 @media (max-width: 600px) {
