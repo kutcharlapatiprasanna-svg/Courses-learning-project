@@ -13,6 +13,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/skillora-lms-project/",
   server: {
     port: 5177,
     strictPort: true,
