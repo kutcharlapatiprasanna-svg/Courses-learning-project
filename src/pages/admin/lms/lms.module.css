@@ -380,6 +380,88 @@
   margin-bottom: 10px;
 }
 
+.courseDetails {
+  max-width: 1200px;
+  padding-top: 28px;
+  color: #555;
+}
+
+.courseDetails .detail {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  margin-bottom: 34px;
+}
+
+.courseDetails .detail img {
+  aspect-ratio: 3 / 2;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.courseDetails .badge {
+  color: #493584;
+  background: #f0eafa;
+}
+
+.courseDetails .detail h1 {
+  margin: 8px 0 14px;
+  color: #21116f;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.2;
+}
+
+.courseDetails .price {
+  color: #151515;
+  font-size: 20px;
+}
+
+.courseDetails .actions {
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.courseDetails .btn {
+  background: #21116f;
+}
+
+.courseDetails .btn:hover:not(:disabled) {
+  background: #38248e;
+}
+
+.courseDetails .btnGhost {
+  color: #21116f;
+  border-color: #21116f;
+  background: #fff;
+}
+
+.courseDetails .btnGhost:hover:not(:disabled) {
+  background: #f5f2fb;
+}
+
+.courseDetails .section {
+  margin-top: 30px;
+}
+
+.courseDetails .section h2 {
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e8def8;
+  color: #452c82;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.courseList {
+  margin: 0;
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.courseEmpty {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
 .lectureGroup {
   margin-bottom: 14px;
 }

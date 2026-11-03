@@ -47,9 +47,6 @@ const LmsCourseDetail = () => {
 
   const { ids: wishIds, toggle } = useWishlist();
 
-  console.log("URL Course ID:", courseId);
-  console.log("All URL Params:", params);
-
   const validCourseId =
     courseId &&
     courseId !== "undefined" &&
@@ -87,7 +84,6 @@ const LmsCourseDetail = () => {
     [courseId, user?._id]
   );
 
-  const [checkout, setCheckout] = useState(false);
   const review = useForm({ rating: "5", comment: "" });
   const [posting, setPosting] = useState(false);
 
@@ -148,7 +144,7 @@ const LmsCourseDetail = () => {
       return navigate("/auth/login");
     }
 
-    setCheckout(true);
+    toast.error("Checkout is not available yet");
   };
 
   const submitReview = async (event) => {
@@ -178,7 +174,7 @@ const LmsCourseDetail = () => {
   };
 
   return (
-    <>
+    <main className={`${S.page} ${S.courseDetails}`}>
       <div className={S.detail}>
         <img
           src={thumbnailUrl(course.thumbnail)}
@@ -194,11 +190,7 @@ const LmsCourseDetail = () => {
 
           <p>{course.description}</p>
 
-          <p>
-            ⭐ {course.rating || 0} · {course.purchased || 0} students
-          </p>
-
-          <p className={S.price} style={{ fontSize: 24 }}>
+          <p className={S.price}>
             ₹{course.price ?? 0}
 
             {course.estimatedPrice > 0 && (
@@ -206,7 +198,21 @@ const LmsCourseDetail = () => {
             )}
           </p>
 
+          <p>⭐ {course.rating || 0}</p>
+          <p>{course.purchased || 0} students</p>
+
           <div className={S.actions}>
+            {course.demoUrl && (
+              <a
+                className={S.btn}
+                href={course.demoUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Watch Demo
+              </a>
+            )}
+
             {enrolled ? (
               <button
                 className={S.btn}
@@ -216,7 +222,7 @@ const LmsCourseDetail = () => {
               </button>
             ) : (
               <button className={S.btn} onClick={buy}>
-                Buy course
+                Buy Course
               </button>
             )}
 
@@ -228,39 +234,42 @@ const LmsCourseDetail = () => {
                 ? "❤️ In wishlist"
                 : "🤍 Add to wishlist"}
             </button>
-
-            {course.demoUrl && (
-              <a
-                className={`${S.btn} ${S.btnGhost}`}
-                href={course.demoUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Watch demo
-              </a>
-            )}
           </div>
-
-          {course.benefits?.length > 0 && (
-            <>
-              <h3 style={{ margin: "16px 0 6px" }}>
-                What you will learn
-              </h3>
-
-              <ul>
-                {course.benefits.map((benefit, index) => (
-                  <li key={benefit._id || index}>
-                    ✓ {benefit.title}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
         </div>
       </div>
 
       <section className={S.section}>
-        <h2>Curriculum</h2>
+        <h2>What You Will Learn</h2>
+        {course.benefits?.length ? (
+          <ul className={S.courseList}>
+            {course.benefits.map((benefit, index) => (
+              <li key={benefit._id || index}>
+                {benefit.title || benefit}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className={S.courseEmpty}>No benefits added.</p>
+        )}
+      </section>
+
+      <section className={S.section}>
+        <h2>Prerequisites</h2>
+        {course.prerequisites?.length ? (
+          <ul className={S.courseList}>
+            {course.prerequisites.map((prerequisite, index) => (
+              <li key={prerequisite._id || index}>
+                {prerequisite.title || prerequisite}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className={S.courseEmpty}>No prerequisites added.</p>
+        )}
+      </section>
+
+      <section className={S.section}>
+        <h2>Course Content</h2>
 
         <Async state={curriculum}>
           {() =>
@@ -301,7 +310,7 @@ const LmsCourseDetail = () => {
                 </div>
               ))
             ) : (
-              <Empty>No lectures yet.</Empty>
+              <p className={S.courseEmpty}>No course content available.</p>
             )
           }
         </Async>
@@ -371,21 +380,7 @@ const LmsCourseDetail = () => {
         )}
       </section>
 
-      {checkout && (
-        <CheckoutModal
-          course={{
-            ...course,
-            _id: course._id || courseId,
-          }}
-          onClose={() => setCheckout(false)}
-          onPaid={() => {
-            setCheckout(false);
-            toast.success("Course purchased successfully");
-            navigate("/lms/learning");
-          }}
-        />
-      )}
-    </>
+    </main>
   );
 };
 

@@ -1,7 +1,4 @@
 
-/* =========================================
-   PROFESSIONAL LMS NAVBAR THEME
-========================================= */
 
 * {
   box-sizing: border-box;
@@ -27,9 +24,6 @@
   --danger: #f87171;
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
 
 .navbar {
   width: 100%;
@@ -51,7 +45,7 @@
 
 .logo {
   color: var(--heading);
-  font-size: 27px;
+  font-size: 65px;
   font-weight: 800;
   text-decoration: none;
   letter-spacing: -1px;
@@ -61,9 +55,6 @@
   color: var(--brand);
 }
 
-/* =========================================
-   NAVIGATION LINKS
-========================================= */
 
 .nav-links {
   display: flex;
@@ -73,7 +64,7 @@
 
 .nav-links > a {
   color: var(--nav-text);
-  font-size: 14px;
+  font-size: 25px;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -83,9 +74,7 @@
   color: var(--brand);
 }
 
-/* =========================================
-   AUTH BUTTONS
-========================================= */
+
 
 .auth-links {
   display: flex;
@@ -126,9 +115,7 @@
   border-color: #2563eb;
 }
 
-/* =========================================
-   PROFILE SECTION
-========================================= */
+
 
 .profile-container {
   position: relative;
@@ -180,9 +167,7 @@
   font-size: 10px;
 }
 
-/* =========================================
-   PROFILE DROPDOWN
-========================================= */
+
 
 .profile-dropdown {
   position: absolute;
@@ -212,9 +197,7 @@
   }
 }
 
-/* =========================================
-   PROFILE DETAILS
-========================================= */
+
 
 .profile-top {
   display: flex;
@@ -271,9 +254,6 @@
   text-transform: capitalize;
 }
 
-/* =========================================
-   DROPDOWN LINKS
-========================================= */
 
 .dropdown-divider {
   height: 1px;
@@ -323,9 +303,7 @@
   font-size: 18px;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+
 
 @media (max-width: 768px) {
   .navbar {

@@ -1,6 +1,4 @@
 
-// Phase 2 – LMS Marketplace API layer
-// Uses the shared Axios instance without changing Phase 1 services.
 
 import axiosInstance from "../../../api/axiosInstance";
 import { idOf } from "../../../utils";
@@ -116,7 +114,6 @@ export const GetInstructorRevenueApi = () =>
 export const GetInstructorAnalyticsApi = () =>
   get("/lms/instructor/analytics");
 
-// ================= ADMIN =================
 
 export const GetAdminAnalyticsApi = () =>
   get("/lms/admin/analytics");
@@ -160,7 +157,6 @@ export const GetCouponsApi = () =>
 export const CreateCouponApi = (payload) =>
   post("/lms/coupons", payload);
 
-// ================= EXPORT ENROLLMENTS =================
 
 export const ExportEnrollmentsApi = async () => {
   const res = await axiosInstance.get(
@@ -171,7 +167,6 @@ export const ExportEnrollmentsApi = async () => {
   saveBlob(res.data, "enrollments.csv");
 };
 
-// ================= RESPONSE HELPERS =================
 
 // Return the expected array from an API response.
 export const toList = (res, ...keys) => {
